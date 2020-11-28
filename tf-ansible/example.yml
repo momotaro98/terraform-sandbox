@@ -1,0 +1,21 @@
+---
+- hosts: role_web1
+  become: yes
+  tasks:
+    - name: Install Package
+      apt:
+        pkg: ['nginx']
+        state: present
+    - name: Disable default config
+      file:
+        path: /etc/nginx/sites-enabled/default
+        state: absent
+  handlers:
+    - name: daemon-reload
+      systemd:
+        daemon_reload: yes
+    - name: reload nginx
+      systemd:
+        name: nginx
+        state: reloaded
+        daemon_reload: yes
