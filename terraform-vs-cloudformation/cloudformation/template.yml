@@ -13,10 +13,8 @@ Resources:
         - Key: Name
           Value: "instance-by-cloudformation"
       BlockDeviceMappings:
-      - DeviceName: "/dev/sdm"
+      - DeviceName: "/dev/sda1"
         Ebs:
           VolumeType: "standard"
           DeleteOnTermination: "true"
           VolumeSize: "8"
-      - DeviceName: "/dev/sdk"
-        NoDevice: {}
