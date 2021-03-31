@@ -7,11 +7,12 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: "ami-0ef85cf6e604e5650"
+      InstanceType: "t3.micro"
       SubnetId: "subnet-00301c4fabb0d2def"
       SecurityGroupIds: ["sg-08cb2b147c604dae4"]
       Tags:
         - Key: Name
-          Value: "instance-by-cloudformation"
+          Value: "MANUAL-DONE-instance-by-cloudformation"
       BlockDeviceMappings:
       - DeviceName: "/dev/sda1"
         Ebs:

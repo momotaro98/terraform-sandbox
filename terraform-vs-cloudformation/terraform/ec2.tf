@@ -14,6 +14,6 @@ resource "aws_instance" "test-instance" {
   }
 
   tags = {
-    Name = "instance-by-terraform"
+    Name = "MANUAL-DONE-instance-by-terraform-up"
   }
 }
